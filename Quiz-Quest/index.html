@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Quest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Diplomata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="front">
+        <div id="image-container">> 
+
+    <div class="container">
+        <h1>Quiz Quest</h1>
+        <!-- Start Button -->
+        <div class="start_btn" style="--clr: #2dd9fe; --clr-glow: #4003e6">
+            <button>START</button>
+        </div>
+    
+        <!-- Info Box -->
+        <div class="info_box">
+            <div class="info_title">
+                <span>Quiz Instructions</span>
+            </div>
+            <div class="info_list">
+                <div class="info">1.You will have only <span>15 seconds</span> for each question.</div>
+                <div class="info">2.Select one from the given options.</div>
+                <div class="info">3.Click on next button to move further and previous button to return back to previous question.</div>
+                <div class="info">4.Your total score will be displayed after you answer all the questions.</div>
+                <div class="info">5.Click the Continue button to start the quiz..</div>
+            </div>
+            <div class="buttons">
+                
+                <a href="#" class="continue">Continue</a>
+            </div>
+        </div>
+        
+         
+    
+        <!-- Quiz Box -->
+        <div class="quiz-body" style="display: none;">
+            
+            <div class="timer">Timer: <span id="timer">15</span></div>
+            <div id="question">Question text will appear here</div>
+            <div id="options">
+                <!-- Options will go here -->
+            </div>
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+  html,
+  body {
+      height: 100%;
+      margin: 0;
+      
+      }
+      .timer {
+        font-size: 30px; 
+        font-weight: bold;
+        color: white;
+    }
+    
+    #timer {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+  h1{
+    font-family: "Diplomata", serif;
+    font-weight: 400;
+    text-shadow: #31002b;
+    text-align: center;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    width: 400px;
+    top: 10%;
+       
+  }
+  .start_btn{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform:scale(1.5);
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+    0px 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .container {
+    height: 80vh;
+    top: 40%;
+    margin-inline: 2.5rem;
+    display: grid;
+    place-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.438); /* Semi-transparent background to make text readable */
+    border-radius: 10px;
+    text-align: center;    
+    z-index: 2;
+  }
+  .info_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2),
+    0px 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .info_box{
+    display: none;
+    margin-top: 30px;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1); 
+    border: 3px solid rgba(255, 255, 255, 0.836);
+    width: 540px;
+    border-radius: 5px;
+  }
+  .info_box .buttons {
+      height: 60px;
+      display: flex;
+      color: white;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 35px;
+      border-top: 1px solid lightgray;
+  }
+  .info_box .buttons a{
+      margin:0 5px;
+      height: 40px;
+      width: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.836);
+      
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+  }
+  .buttons a{
+     align-items: center;
+      position: absolute;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+  }
+  .info_title{
+      font:bold;
+      color: rgb(255, 252, 247);
+  }
+  .info_list{
+      text-align: left;
+      color:white;
+  }
+  .info_box .info_title{
+      height: 60px;
+      width: 87%;
+      border-bottom: 1px solid lightgrey;
+      display: flex;
+      align-items: center;
+      padding: 0 35px;
+      font-size: 20px;
+      font-weight: 600;
+  }
+  .info_box .info_list{
+    padding: 15px 35px;  
+  }
+  .info_box .info_list .info{
+  margin: 5px 0;
+  font-size: 17px;
+  }
+  .info_box .info_list .info span{
+      font-weight: 600;
+      color: #007bff;
+  }
+  .info_box.activeInfo{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  /* start button styling*/
+  
+  .start_btn{
+      position: absolute;
+      
+      transform: translate(-50%, -50%);
+      width: 155px;
+      height: 50px;
+      margin: 20px;
+  }
+  .start_btn button{
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.051);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      border-top: 1px solid rgba(250, 52, 52, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 10;
+      color: #fff;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: x-large;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: 0.5s;
+      overflow: hidden;
+      backdrop-filter: blur(15px);
+  }
+  .start_btn:hover button {
+      letter-spacing: 3px;
+    }
+    
+    .start_btn button:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0.149), transparent);
+      transform: skewX(45deg);
+      transition: 0.5s;
+      transition-delay: 0.5s;
+    }
+    
+    button:hover::before {
+      transform: skewX(45deg) translateX(200%);
+      transition-delay: 0s;
+    }
+    
+    .start_btn:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--clr-glow);
+      bottom: -2px;
+      width: 30px;
+      height: 10px;
+      border-radius: 10px;
+      transition: 0.5s;
+      transition-delay: 0s;
+    }
+    
+    .start_btn:hover::before {
+      bottom: 0px;
+      height: 50%;
+      width: 80%;
+      border-radius: 30px;
+      transition-delay: 0.5s;
+    }
+    
+    .start_btn:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--clr-glow);
+      top: -2px;
+      width: 30px;
+      height: 10px;
+      border-radius: 10px;
+      transition: 0.5s;
+      transition-delay: 0s;
+    }
+    
+    .start_btn:hover::after {
+      top: 0px;
+      height: 50%;
+      width: 80%;
+      border-radius: 30px;
+      transition-delay: 0.5s;
+    }
+    .start_btn:nth-child(1):before,
+  .start_btn:nth-child(1):after {
+    background: var(--clr);
+    box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+      0 0 60px var(--clr);
+  }
+  
+  .start_btn:nth-child(2):before,
+  .start_btn:nth-child(2):after {
+    background: var(--clr);
+    box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+      0 0 60px var(--clr);
+  }
+  
+  .start_btn:nth-child(3):before,
+  .start_btn:nth-child(3):after {
+    background: var(--clr);
+    box-shadow: 0 0 5px var(--clr), 0 0 15px var(--clr), 0 0 30px var(--clr),
+      0 0 60px var(--clr);
+  }
+  
+  /* Quiz Box Styling */
+.quiz-body {
+    display: none;
+    margin-top: 50px;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.quiz-body #question {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.quiz-body #options {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-body #options button {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgb(248, 199, 248);
+    color: rgb(0, 0, 0);
+    border: 5px solid #31002b;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.quiz-body #options button:hover {
+    background-color: #8f0ea0e3;
+}
+ 
+    /*image properties*/
+    #front{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background-image: url('./quiz-img.jpeg'); /* 3D image background for front page */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;  /* Parallax effect */
+    transition: background-position 0.3s ease-in-out; /* Smooth transition */
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    }
+    #front::before{
+      content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: inherit;
+    transform: translateZ(-10px) scale(0.9);
+    filter: blur(10px);
+  
+    }
+    
+    /*Previous and next button style*/
+  #next {
+    background-color: #500268;   
+    color: white;               
+    border-radius: 8px;       
+    padding: 12px 24px;         
+    font-size: 18px;            
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #previous {
+    background-color: #500268;   
+    color: white;             
+    border-radius: 8px;          
+    padding: 12px 24px;          
+    font-size: 18px;             
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  #next:hover {
+    background-color: #320141;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  #next:active {
+    background-color: #320141; 
+    transform: scale(0.98);    
+  }
+  #previous:hover {
+    background-color: #320141; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+  }
+  
+  #previous:active {
+    background-color: #320141; 
+    transform: scale(0.98);   
+  }
+  
+    
